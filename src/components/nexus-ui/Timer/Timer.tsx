@@ -128,7 +128,7 @@ const Timer: React.FC<TimerProps> = ({
   return (
     <div
       className={cn(
-        " text-white flex flex-col justify-center text-[7.5rem] scr_0:text-[6.5rem] scr_2:text-[5rem] scr_4:text-[5rem] select-none leading-loose",
+        " text-white flex flex-col justify-center text-[7.5rem] scr_0:text-[6.5rem] scr_2:text-[5rem] scr_4:text-[5rem] scr_5:text-[4rem] scr_5_1:text-[3.5rem] select-none leading-loose",
         className
       )}
       style={{
@@ -143,8 +143,8 @@ const Timer: React.FC<TimerProps> = ({
         <>
           {timeDisplay.days.show && (
             <>
-              <div className="pr-10 flex items-center mx-auto">
-                <div className="min-w-[11rem] scr_2:min-w-[9rem] bg-white text-black rounded px-2 mr-2 max-h-[10rem] flex justify-center items-center">
+              <div className="pr-10 scr_2_:pr-0 flex items-center mx-auto">
+                <div className="min-w-[11rem] scr_2:min-w-[9rem] scr_5:min-w-[7rem] scr_5:max-h-[7rem] scr_5_1:min-w-[6rem] scr_5_1:max-h-[6rem] bg-white text-black rounded px-2 mr-2 max-h-[10rem] flex justify-center items-center">
                   <span>{timeLeft.days}</span>
                 </div>
                 J
@@ -157,7 +157,7 @@ const Timer: React.FC<TimerProps> = ({
                 {style === "normal" ? (
                   <>
                     <span
-                      className={`inline-block min-w-[2ch] ${separator === "label" ? "pr-10" : ""}`}
+                      className={`inline-block min-w-[2ch] ${separator === "label" ? "pr-10 scr_2_:pr-0" : ""}`}
                     >
                       {timeLeft.hours}
                       {separator === "label" && "h"}{" "}
@@ -165,8 +165,8 @@ const Timer: React.FC<TimerProps> = ({
                   </>
                 ) : (
                   <>
-                    <div className="pr-10 flex items-center">
-                      <div className="w-full min-w-[11rem] scr_2:min-w-[9rem] bg-white text-black rounded px-2 mr-2 max-h-[10rem] flex justify-center items-center">
+                    <div className="pr-10 scr_2_:pr-0 flex items-center">
+                      <div className="w-full min-w-[11rem] scr_2:min-w-[9rem] scr_5:min-w-[7rem] scr_5:max-h-[7rem] scr_5_1:min-w-[6rem] scr_5_1:max-h-[6rem] bg-white text-black rounded px-2 mr-2 max-h-[10rem] flex justify-center items-center">
                         <span>{timeLeft.hours}</span>
                       </div>
                       {separator === "label" && "h"}
@@ -181,7 +181,7 @@ const Timer: React.FC<TimerProps> = ({
                 {style === "normal" ? (
                   <>
                     <span
-                      className={`inline-block min-w-[2ch] ${separator === "label" ? "pr-10" : ""}`}
+                      className={`inline-block min-w-[2ch] ${separator === "label" ? "pr-10 scr_2_:pr-0" : ""}`}
                     >
                       {timeLeft.minutes}
                       {separator === "label" && "min"}
@@ -189,8 +189,8 @@ const Timer: React.FC<TimerProps> = ({
                   </>
                 ) : (
                   <>
-                    <div className="pr-10 flex items-center">
-                      <div className="w-full min-w-[11rem] scr_2:min-w-[9rem] bg-white text-black rounded px-2 mr-2 max-h-[10rem] flex justify-center items-center">
+                    <div className="pr-10 scr_2_:pr-0 flex items-center">
+                      <div className="w-full min-w-[11rem] scr_2:min-w-[9rem] scr_5:min-w-[7rem] scr_5:max-h-[7rem] scr_5_1:min-w-[6rem] scr_5_1:max-h-[6rem] bg-white text-black rounded px-2 mr-2 max-h-[10rem] flex justify-center items-center">
                         <span>{timeLeft.minutes}</span>
                       </div>
                       {separator === "label" && "min"}
@@ -205,7 +205,7 @@ const Timer: React.FC<TimerProps> = ({
                 {style === "normal" ? (
                   <>
                     <span
-                      className={`inline-block min-w-[2ch] ${separator === "label" ? "pr-10" : ""}`}
+                      className={`inline-block min-w-[2ch] ${separator === "label" ? "pr-10 scr_2_:pr-0" : ""}`}
                     >
                       {timeLeft.seconds}
                       {separator === "label" && "sec"}
@@ -213,8 +213,8 @@ const Timer: React.FC<TimerProps> = ({
                   </>
                 ) : (
                   <>
-                    <div className="pr-10 flex items-center">
-                      <div className="w-full min-w-[11rem] scr_2:min-w-[9rem] bg-white text-black rounded px-2 mr-2 max-h-[10rem] flex justify-center items-center">
+                    <div className="pr-10 scr_2_:pr-0 flex items-center">
+                      <div className="w-full min-w-[11rem] scr_2:min-w-[9rem] scr_5:min-w-[7rem] scr_5:max-h-[7rem] scr_5_1:min-w-[6rem] scr_5_1:max-h-[6rem] bg-white text-black rounded px-2 mr-2 max-h-[10rem] flex justify-center items-center">
                         <span>{timeLeft.seconds}</span>
                       </div>
                       {separator === "label" && "sec"}
