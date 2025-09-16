@@ -143,21 +143,34 @@ const Timer: React.FC<TimerProps> = ({
         <>
           {timeDisplay.days.show && (
             <>
-              <div className="pr-10 scr_2_:pr-0 flex items-center scr_2:mb-10 scr_2_:mb-5 px-2">
-                <div className="min-w-[11rem] scr_2:min-w-[9rem] scr_5:min-w-[7rem] scr_5:max-h-[7rem] scr_5_1:min-w-[6rem] scr_5_1:max-h-[6rem] bg-white text-black rounded px-2 mr-2 max-h-[10rem] flex justify-center items-center">
-                  <span>{timeLeft.days}</span>
-                </div>
-                J
-              </div>
+              {style === "normal" ? (
+                <>
+                  <div
+                    className={`inline-block min-w-[2ch] px-2 ${separator === "label" ? "pr-10 scr_2_:pr-0" : ""} ${style === "normal" && '-mb-2 scr_2_:mb-3' }`}
+                  >
+                    {timeLeft.days}
+                    {separator === "label" && "J"}{" "}
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="pr-10 scr_2_:pr-0 flex items-center scr_2:mb-10 scr_2_:mb-5 px-2">
+                    <div className="min-w-[11rem] scr_2:min-w-[9rem] scr_5:min-w-[7rem] scr_5:max-h-[7rem] scr_5_1:min-w-[6rem] scr_5_1:max-h-[6rem] bg-white text-black rounded px-2 mr-3 max-h-[10rem] flex justify-center items-center">
+                      <span>{timeLeft.days}</span>
+                    </div>
+                    J
+                  </div>
+                </>
+              )}
             </>
           )}
-          <div className="flex justify-center items-center px-2 py-0.5 rounded-md text-center scr_2_:flex-col scr_2_:gap-5  scr_2_:items-start scr_2_:space-x-0 space-x-2 ">
+          <div className={`flex justify-center items-center px-2 py-0.5 rounded-md text-center scr_2_:flex-col scr_2_:gap-5 ${style === "normal" && '-space-y-12  scr_5_1:-gap-y-7'} scr_2_:items-start scr_2_:space-x-0 space-x-2 `}>
             {timeDisplay.hours.show && (
               <>
                 {style === "normal" ? (
                   <>
                     <div
-                      className={`inline-block min-w-[2ch] ${separator === "label" ? "pr-10 scr_2_:pr-0" : ""}`}
+                      className={`inline-block min-w-[2ch] -mt-12 ${separator === "label" ? "pr-10 scr_2_:pr-0" : ""}`}
                     >
                       {timeLeft.hours}
                       {separator === "label" && "h"}{" "}
