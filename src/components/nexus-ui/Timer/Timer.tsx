@@ -128,7 +128,7 @@ const Timer: React.FC<TimerProps> = ({
   return (
     <div
       className={cn(
-        " text-white flex flex-col justify-center text-[7.5rem] scr_0:text-[6.5rem] scr_2:text-[5rem] scr_4:text-[5rem] scr_5:text-[4rem] scr_5_1:text-[3.5rem] select-none leading-loose",
+        " text-white flex flex-col justify-center items-center scr_2_:items-start text-[7.5rem] scr_0:text-[6.5rem] scr_2:text-[5rem] scr_4:text-[5rem] scr_5:text-[4rem] scr_5_1:text-[3.5rem] select-none leading-loose",
         className
       )}
       style={{
@@ -143,7 +143,7 @@ const Timer: React.FC<TimerProps> = ({
         <>
           {timeDisplay.days.show && (
             <>
-              <div className="pr-10 scr_2_:pr-0 flex items-center mx-auto">
+              <div className="pr-10 scr_2_:pr-0 flex items-center scr_2:mb-10 scr_2_:mb-5 px-2">
                 <div className="min-w-[11rem] scr_2:min-w-[9rem] scr_5:min-w-[7rem] scr_5:max-h-[7rem] scr_5_1:min-w-[6rem] scr_5_1:max-h-[6rem] bg-white text-black rounded px-2 mr-2 max-h-[10rem] flex justify-center items-center">
                   <span>{timeLeft.days}</span>
                 </div>
@@ -151,17 +151,17 @@ const Timer: React.FC<TimerProps> = ({
               </div>
             </>
           )}
-          <div className="flex justify-center items-center px-2 py-0.5 rounded-md text-center scr_2_:flex-col scr_2_:gap-8 scr_2_:items-start scr_2_:space-x-0 space-x-2 ">
+          <div className="flex justify-center items-center px-2 py-0.5 rounded-md text-center scr_2_:flex-col scr_2_:gap-5  scr_2_:items-start scr_2_:space-x-0 space-x-2 ">
             {timeDisplay.hours.show && (
               <>
                 {style === "normal" ? (
                   <>
-                    <span
+                    <div
                       className={`inline-block min-w-[2ch] ${separator === "label" ? "pr-10 scr_2_:pr-0" : ""}`}
                     >
                       {timeLeft.hours}
                       {separator === "label" && "h"}{" "}
-                    </span>
+                    </div>
                   </>
                 ) : (
                   <>
